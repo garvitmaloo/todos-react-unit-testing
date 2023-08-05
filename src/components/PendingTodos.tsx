@@ -1,4 +1,6 @@
-const PendingTodos = () => {
+import { Todo } from "./AllTodosContainer";
+
+const PendingTodos = ({ pendingTodos }: { pendingTodos: Todo[] }) => {
   return (
     <div className="w-full overflow-auto shadow-md p-3 text-center">
       <h1 className="mb-5">Pending Todos</h1>
