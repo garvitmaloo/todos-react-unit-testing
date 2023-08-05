@@ -1,0 +1,22 @@
+{
+  "todos": [
+    {
+      "id": "1",
+      "title": "Learn react unit testing",
+      "description": "React testing library and Jest",
+      "isFinished": false
+    },
+    {
+      "id": "2",
+      "title": "Learn Docker",
+      "description": "Using docker for containerization",
+      "isFinished": false
+    },
+    {
+      "id": "3",
+      "title": "Practice E2E testing",
+      "description": "E2E testing with Cypress",
+      "isFinished": false
+    }
+  ]
+}
