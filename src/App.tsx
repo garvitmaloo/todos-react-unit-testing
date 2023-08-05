@@ -1,7 +1,11 @@
+import AllTodosContainer from "./components/AllTodosContainer";
+import Header from "./components/Header";
+
 function App() {
   return (
-    <div className="py-5 text-center text-lg">
-      <h1>Welcome</h1>
+    <div className="max-w-[75%] mx-auto">
+      <Header />
+      <AllTodosContainer />
     </div>
   );
 }
