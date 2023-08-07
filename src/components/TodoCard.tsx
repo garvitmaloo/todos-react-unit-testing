@@ -6,7 +6,10 @@ import { Todo } from "./AllTodosContainer";
 
 const TodoCard = ({ todoDetails }: { todoDetails: Todo }) => {
   return (
-    <div className="p-3 my-5 shadow hover:shadow-md transition-all duration-100 flex gap-3 text-left">
+    <div
+      className="p-3 my-5 shadow hover:shadow-md transition-all duration-100 flex gap-3 text-left"
+      data-testid="todo-card"
+    >
       <div className="grow">
         <Typography variant="h5" component="h5" sx={{ marginBottom: "8px" }}>
           {todoDetails?.title}
