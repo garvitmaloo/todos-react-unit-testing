@@ -8,7 +8,9 @@ const TodoCard = ({ todoDetails }: { todoDetails: Todo }) => {
   return (
     <div
       className="p-3 my-5 shadow hover:shadow-md transition-all duration-100 flex gap-3 text-left"
-      data-testid="todo-card"
+      data-testid={`todo-card--${
+        todoDetails.isFinished ? "finished" : "pending"
+      }`}
     >
       <div className="grow">
         <Typography variant="h5" component="h5" sx={{ marginBottom: "8px" }}>
@@ -18,15 +20,22 @@ const TodoCard = ({ todoDetails }: { todoDetails: Todo }) => {
       </div>
       <div className="self-center">
         {!todoDetails.isFinished && (
-          <Button
-            variant="contained"
-            title="Mark as done"
-            sx={{ margin: "0 6px" }}
-          >
-            <DownloadDoneIcon />
-          </Button>
+          <>
+            <Button
+              variant="contained"
+              title="Mark as done"
+              sx={{ margin: "0 6px" }}
+              data-testid="mark-as-done-btn"
+            >
+              <DownloadDoneIcon />
+            </Button>
+          </>
         )}
-        <Button variant="contained" title="Delete">
+        <Button
+          variant="contained"
+          title="Delete"
+          data-testid="delete-todo-btn"
+        >
           <DeleteIcon />
         </Button>
       </div>

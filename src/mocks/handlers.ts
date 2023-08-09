@@ -16,6 +16,12 @@ export const handlers = [
           description: "Some more details",
           isFinished: true,
         },
+        {
+          id: "3",
+          title: "Last todo",
+          description: "All the details",
+          isFinished: false,
+        },
       ])
     );
   }),
